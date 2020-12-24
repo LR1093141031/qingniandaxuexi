@@ -1,0 +1,23 @@
+{
+  "daxuexi":{
+            "Enable" : "True",
+            "Debug" : "False"
+            },
+  "saucenao": {
+            "Enable" : "True",
+            "Debug" : "False"
+              },
+  "setu": {
+            "Enable" : "True",
+            "Debug" : "False"
+          },
+  "pixiv":{
+            "Enable" : "True",
+            "Debug" : "False"
+          },
+  "tracemoe": {
+            "Enable" : "True",
+            "Debug" : "False"
+              }
+
+}
