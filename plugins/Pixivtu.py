@@ -1,17 +1,15 @@
-from nonebot import on_command, CommandSession, permission
+from nonebot import on_command, CommandSession
 import nonebot
 import re
 import random
 import time
-import sys
 import os
-from . import Pixiv, md5
-
-
 path = os.path.split(os.path.realpath(__file__))[0]
+from .module import Pixiv, md5
+
+
 download_path_r18 = path + '/data/pixiv_r18'
 download_path_general = path + '/data/pixiv_general'
-
 if not os.path.exists(download_path_r18):
     os.makedirs(download_path_r18)
 if not os.path.exists(download_path_general):
@@ -56,7 +54,7 @@ async def pixiv_rank(session: CommandSession):
     start_time = time.time()  # 开始计时
     pixiv = Pixiv.Pixiv()
     try:
-        rank_dict = pixiv.get_rank(r18=r18).items()  # 获取榜单信息
+        rank_dict = pixiv.get_rank(r18=r18)  # 获取榜单信息
     except Exception as e:
         print(e)
         await session.send('榜单数据获取失败，请重试')
@@ -68,16 +66,15 @@ async def pixiv_rank(session: CommandSession):
     else:
         rank_text = f'P站今日常规榜单,顺位#{k}-#{k + 10}\n'
 
-    pixiv.get_url(k, k + 10)
-    pixiv.pic_download(download_path)
+    pixiv.get_rank_url(k, k + 10)
+    file_list = pixiv.get_rank_pic(download_path)
+    file_list = iter(file_list)
     id_list = []
-    for i, j in rank_dict[k:k+10]:  # i 是作者什么的信息 j是图片id
-        id_list.append(j)
-        rank_text += f"{i} {j}\n"
-        rank_text += f"[CQ:image,file=file:///{download_path}/{j}.jpg]\n"
+    for i in rank_dict[k:k+10]:  # i 是作者什么的信息 j是图片id
+        rank_text += f"{i}\n[CQ:image,file=file:///{next(file_list)}]\n"
 
-    for j in id_list:
-        if not md5.md5pic(f'{download_path}/{j}.jpg'):  # 改图模块，防裸奔
+    for file in file_list:
+        if not md5.md5pic(f'{file}'):  # 改图模块，防裸奔
             await session.send('改图失败！')
             return
 
@@ -90,35 +87,35 @@ async def pixiv_rank(session: CommandSession):
 @pixiv_rank.args_parser
 async def _(session: CommandSession):
     # 去掉消息首尾的空白符
-    #stripped_arg = session.current_arg_text.split()
     session.state['r18'] = True if re.findall('[rR]18', session.current_arg_text) else False
     rank_range_text = session.current_arg_text.replace('r18', '').replace('R18', '')
     rank_range = re.findall(r"\d{1,3}", rank_range_text)
     session.state['rank_range'] = rank_range[0] if rank_range else None
-    r18 = re.findall(r"[r,R]18", session.current_arg_text)
-    session.state['r18mode'] = True if r18 else False
 
 
-@on_command('pixiv_pic', aliases=('P站图片', 'p站图片', 'P站', 'p'), only_to_me=False)
+@on_command('pixiv_pic', aliases=('P站图片', 'p站图片', 'p', 'P'), only_to_me=False)
 async def pixiv_pic(session: CommandSession):
     pixiv = Pixiv.Pixiv()
     pic_id = session.get('pic_id', prompt='P站图片id？')
-    pic_url = pixiv.get_url_single(pic_id)
-    if pic_url == '请求超时':
-        await session.send('url请求超时')
-        return
-    if not pic_url:
+    pic_detail_dict = pixiv.pic_parser_single(pic_id)
+    if not pic_detail_dict:
         await session.send('P站中无法搜索到该图片,请重试。')
         return
-    pic_file = pixiv.pic_download_single(download_path_general, pic_url)
+    if pixiv.is_that_gif:
+        await session.send('该图片为gif动图，请等待下载')
+    pic_file = pixiv.pic_download_single(download_path_general, pic_detail_dict['url']['original'])
     if not pic_file:
         await session.send('下载请求超时')
         return
-    await session.send(f"[CQ:image,file=file:///{pic_file}]")
+    tag_message = ''
+    for key in pic_detail_dict['tag'].keys():
+        tag_message += pic_detail_dict['tag'][key] if pic_detail_dict['tag'][key] != '' else key
+        tag_message += ' '
+    await session.send(f"标题:{pic_detail_dict['title']}{'-动图' if pixiv.is_that_gif else ''}\n作者:{pic_detail_dict['artist']}\n标签:{tag_message}\n[CQ:image,file=file:///{pic_file}]")
+
 
 @pixiv_pic.args_parser
 async def _(session: CommandSession):
-# 去掉消息首尾的空白符
     stripped_arg = session.current_arg_text.strip()
     if session.is_first_run:
         # 该命令第一次运行（第一次进入命令会话）
@@ -135,6 +132,7 @@ async def _(session: CommandSession):
 
     # 如果当前正在向用户询问更多信息（例如本例中的要查询的城市），且用户输入有效，则放入会话状态
     #session.state[session.current_key] = stripped_arg
+
 
 @nonebot.scheduler.scheduled_job(
     'cron',
@@ -157,11 +155,11 @@ async def _():
     group_list = [213104082, 114672965]
     message = ['涩图时间到啦~', '发点涩图。', '无内鬼来点se图~~', '今天的图马马虎虎吧！~', '差点忘了今日份的蛇图', '阿巴阿巴阿巴']
     pixiv = Pixiv.Pixiv()
-    pixiv.get_rank()
-    pixiv.get_url(k, k+f)
-    pic_list = pixiv.pic_download(download_path_general)
+    pixiv.get_rank(r18=False)
+    pixiv.get_rank_url(k, k + f)
+    file_list = pixiv.get_rank_pic(download_path_general)
     bot = nonebot.get_bot()
     for group in group_list:
         await bot.send_group_msg(group_id=group, message=message[r])
-        for pic in pic_list:
-            await bot.send_group_msg(group_id=group, message=f'[CQ:image,file=file:///{pic}]')
+        for file in file_list:
+            await bot.send_group_msg(group_id=group, message=f'[CQ:image,file=file:///{file}]')

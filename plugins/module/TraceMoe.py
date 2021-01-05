@@ -66,7 +66,6 @@ class TraceMoe:
         for key in results.keys():
             if len(results[key]) >= self.numres + 1:
                 results[key] = results[key][1:self.numres + 1]
-            print(results[key])
         return results
 
     @retry(stop_max_attempt_number=2, wait_fixed=200)  # 自动重试两次，停顿0.2秒)

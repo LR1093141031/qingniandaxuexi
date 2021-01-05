@@ -1,14 +1,11 @@
 from nonebot import on_command, CommandSession
-import os
 import random
-from PIL import Image
-import numpy as np
 import re
 import time
 import sys
 import os
 sys.path.append(os.path.split(os.path.realpath(__file__))[0])
-import md5
+from .module import md5
 
 file_path = os.path.split(os.path.realpath(__file__))[0] + '/data'
 file_path_r18 = file_path + '/pixiv_r18'
@@ -51,7 +48,7 @@ async def setu(session: CommandSession): #消息发送
         return
 
     print(pic_name, pic_report)
-    await session.send(f"""涩图一枚注意查收~\n图片id:{pic_name}""")
+    # await session.send(f"""涩图一枚注意查收~\n图片id:{pic_name}""")
     time.sleep(0.2)
     await session.send(f'[CQ:image,file=file:///{pic_report}]')
 

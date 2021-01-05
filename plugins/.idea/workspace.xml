@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99d04e20-0edd-4d9a-9e57-aacf254f9544" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gjLU2QmsLOXsiiEMDCwKmf6fVp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Python.bot">
+    <configuration name="Pixiv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="plugins" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/module" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module/Pixiv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="plugins" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="plugins" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.bot" />
+        <item itemvalue="Python.Pixiv" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99d04e20-0edd-4d9a-9e57-aacf254f9544" name="Default Changelist" comment="" />
+      <created>1598623066112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598623066112</updated>
+      <workItem from="1598623067603" duration="2220000" />
+      <workItem from="1598626218855" duration="30000" />
+      <workItem from="1599186696818" duration="28034000" />
+      <workItem from="1599235406639" duration="76000" />
+      <workItem from="1599235722842" duration="477000" />
+      <workItem from="1599287151357" duration="1812000" />
+      <workItem from="1599293694578" duration="360000" />
+      <workItem from="1599302589621" duration="5640000" />
+      <workItem from="1599404798947" duration="3235000" />
+      <workItem from="1600661670700" duration="951000" />
+      <workItem from="1601987443583" duration="864000" />
+      <workItem from="1602060830114" duration="5327000" />
+      <workItem from="1602582675353" duration="191000" />
+      <workItem from="1602735387919" duration="114000" />
+      <workItem from="1602767094509" duration="6244000" />
+      <workItem from="1602773471639" duration="650000" />
+      <workItem from="1602775215062" duration="1976000" />
+      <workItem from="1603116792642" duration="3577000" />
+      <workItem from="1603811289581" duration="8465000" />
+      <workItem from="1603854579181" duration="25140000" />
+      <workItem from="1603946449814" duration="5413000" />
+      <workItem from="1604230741347" duration="2304000" />
+      <workItem from="1605357916047" duration="1153000" />
+      <workItem from="1605367413395" duration="451000" />
+      <workItem from="1605538628542" duration="2671000" />
+      <workItem from="1605626915626" duration="1193000" />
+      <workItem from="1605667096545" duration="11440000" />
+      <workItem from="1605795400086" duration="3900000" />
+      <workItem from="1605935542032" duration="1123000" />
+      <workItem from="1606056042207" duration="4279000" />
+      <workItem from="1606292651975" duration="2726000" />
+      <workItem from="1606401847603" duration="8593000" />
+      <workItem from="1606440909763" duration="5669000" />
+      <workItem from="1606487817604" duration="5750000" />
+      <workItem from="1606572674037" duration="4737000" />
+      <workItem from="1606577684419" duration="1697000" />
+      <workItem from="1606656044463" duration="2644000" />
+      <workItem from="1606706975479" duration="561000" />
+      <workItem from="1606725326914" duration="31000" />
+      <workItem from="1606732442820" duration="153000" />
+      <workItem from="1606739034856" duration="329000" />
+      <workItem from="1606873962367" duration="3733000" />
+      <workItem from="1607329339694" duration="272000" />
+      <workItem from="1607440459635" duration="206000" />
+      <workItem from="1607748573240" duration="1465000" />
+      <workItem from="1608006287255" duration="743000" />
+      <workItem from="1608462018107" duration="3179000" />
+      <workItem from="1608526932382" duration="14122000" />
+      <workItem from="1608610843029" duration="20881000" />
+      <workItem from="1608727790766" duration="1773000" />
+      <workItem from="1608775421882" duration="16741000" />
+      <workItem from="1608863506667" duration="25062000" />
+      <workItem from="1608955490887" duration="12157000" />
+      <workItem from="1608990882310" duration="617000" />
+      <workItem from="1609828402267" duration="2114000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608894103023">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608894103023" />
+    <state x="668" y="114" key="#test_(1)" timestamp="1606402780800">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="114" key="#test_(1)/0.0.1920.1040@0.0.1920.1040" timestamp="1606402780800" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1603811760963">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603811760963" />
+    <state width="1877" height="204" key="GridCell.Tab.0.bottom" timestamp="1609829539055">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="204" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609829539055" />
+    <state width="1877" height="204" key="GridCell.Tab.0.center" timestamp="1609829539055">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="204" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609829539055" />
+    <state width="1877" height="204" key="GridCell.Tab.0.left" timestamp="1609829539055">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="204" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609829539055" />
+    <state width="1877" height="204" key="GridCell.Tab.0.right" timestamp="1609829539055">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="204" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609829539055" />
+    <state width="1098" height="346" key="GridCell.Tab.1.bottom" timestamp="1608565604140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1098" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608565604140" />
+    <state width="1098" height="346" key="GridCell.Tab.1.center" timestamp="1608565604140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1098" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608565604140" />
+    <state width="1098" height="346" key="GridCell.Tab.1.left" timestamp="1608565604140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1098" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608565604140" />
+    <state width="1098" height="346" key="GridCell.Tab.1.right" timestamp="1608565604140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1098" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608565604140" />
+    <state x="922" y="161" key="SettingsEditor" timestamp="1603812966515">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603812966515" />
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1609828437572">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609828437572" />
+    <state x="1096" y="152" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602769355280">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1096" y="152" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602769355280" />
+    <state x="940" y="70" width="786" height="900" key="find.popup" timestamp="1603119565650">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="940" y="70" width="786" height="900" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603119565650" />
+    <state x="701" y="161" key="refactoring.ChangeSignatureDialog" timestamp="1606443516879">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="701" y="161" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606443516879" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/manage.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/plugins$Webspiders.coverage" NAME="Webspiders Coverage Results" MODIFIED="1603892364815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/plugins$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1606877253340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/plugins$Ascii2d.coverage" NAME="Ascii2d Coverage Results" MODIFIED="1608641375280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/plugins$Pixiv.coverage" NAME="Pixiv Coverage Results" MODIFIED="1608980721628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module" />
+    <SUITE FILE_PATH="coverage/plugins$test.coverage" NAME="test Coverage Results" MODIFIED="1608979549049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/plugins$tkinker.coverage" NAME="tkinker Coverage Results" MODIFIED="1603971674073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../masturbate" />
+    <SUITE FILE_PATH="coverage/plugins$TraceMoe.coverage" NAME="TraceMoe Coverage Results" MODIFIED="1608644677631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/plugins$SauceNao.coverage" NAME="SauceNao Coverage Results" MODIFIED="1608641472785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/plugins$bot.coverage" NAME="bot Coverage Results" MODIFIED="1609829013739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/plugins$WhatAnime.coverage" NAME="WhatAnime Coverage Results" MODIFIED="1599221212180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

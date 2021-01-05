@@ -6,7 +6,6 @@ sys.path.append('./')
 file_path = os.path.split(os.path.realpath(__file__))[0] + '/data/day'
 
 
-#神社群 213104082 测试群 1045264581
 @on_command('ctx', aliases=['info', 'test'])
 async def test(session:CommandSession): #测试用模块
     info1 = session.ctx

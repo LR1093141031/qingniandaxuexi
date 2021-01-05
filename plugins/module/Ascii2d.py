@@ -10,7 +10,7 @@ class Ascii2d:
     def __init__(self):
         self.agency = agency
         self.state = 200
-        self.numres = 5  # 预定返回结果数
+        self.numres = 3  # 预定返回结果数
         self.ascii2d_url = "https://ascii2d.net/search/multi"
         self.img_url_prefix = 'https://ascii2d.net/'
         self.ascii2d = httpx.Client(http2=False, verify=False, timeout=30, proxies=self.agency)
@@ -40,12 +40,17 @@ class Ascii2d:
     def _parser(self, response):
         soup = BeautifulSoup(response, 'html.parser', from_encoding='utf-8')
         items = soup.find_all(class_='row item-box')
+        print(f'Ascii2d搜索到{len(items)}个匹配对象')
+        if len(items) <= 1:
+            self.state = 'Ascii2d无匹配结果'
+            print('Ascii2d无搜索匹配结果')
+            return False
         for item in items:
             url = self.img_url_prefix + item.find('img')['src']  # 获取页面全部结果图url
             self.img_url.append(url)
             detail_a = item.find_all('a')  # 图片描述
-            detail_strong = item.find_all('strong')  # 图片描述_加粗 这个不常见
-            title = detail_a[0].string + (detail_strong[0].string if detail_strong else '')  # 图片描述标题
+            # detail_strong = item.find_all('strong')  # 图片描述_加粗 这个不常见
+            title = detail_a[0].string # + (detail_strong[0].string if detail_strong else '')  # 图片描述标题
             self.result_title.append(title)
             content = detail_a[1].string  # 图片描述副标题
             self.result_content.append(content)
