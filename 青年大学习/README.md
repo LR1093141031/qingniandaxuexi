@@ -11,6 +11,8 @@ httpx BeautifulSoup PIL
  
 可以自行添加贴图 并修改源码中的 finished_pic_modify 方法中的 num参数 
 
+
+
 |
 
 |
