@@ -32,7 +32,10 @@ class QingNianDaXueXi:
         :return: 依次返回最新一期大学习主标题、网页url、完成图url
         """
         # 搜索最新一期大学习 及其完成图url
-        search_html = self.daxuexiClient.get(url=self.search_url, timeout=10)
+        header = {"Referer": self.search_url,
+                  "Host": "news.cyol.com",
+                  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"}
+        search_html = self.daxuexiClient.get(url=self.search_url, headers=header, timeout=10)
         print(f'大学习搜索返回:{search_html.status_code}')
         search_content = search_html.content.decode('utf-8')
 
